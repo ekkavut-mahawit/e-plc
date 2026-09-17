@@ -1,13 +1,21 @@
 
 <!DOCTYPE html>
 <html lang="th">
-<head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
 
-  <title>กิจกรรมส่งเสริมกระบวนการชุมชนแห่งการเรียนรู้ทางวิชาชีพ
-เพื่อพัฒนาจรรยาบรรณวิชาชีพผ่านระบบเทคโนโลยีสารสนเทศ
-(Ethics in Professional Learning Community : E-PLC) ประจําปี 2569</title>
+<head>
+
+  <meta charset="UTF-8">
+
+  <meta
+    name="viewport"
+    content="width=device-width, initial-scale=1.0"
+  >
+
+  <title>
+    กิจกรรมส่งเสริมกระบวนการชุมชนแห่งการเรียนรู้ทางวิชาชีพ
+    เพื่อพัฒนาจรรยาบรรณวิชาชีพผ่านระบบเทคโนโลยีสารสนเทศ
+    (Ethics in Professional Learning Community : E-PLC) ประจําปี 2569
+  </title>
 
   <link
     href="https://fonts.googleapis.com/css2?family=Sarabun:wght@400;500;600;700&display=swap"
@@ -15,262 +23,994 @@
   >
 
   <style>
+
     * {
       box-sizing: border-box;
     }
 
+
     body {
+
       margin: 0;
-      font-family: "Sarabun", sans-serif;
+
+      font-family:
+        "Sarabun",
+        sans-serif;
+
       background: #f5f5f5;
+
       color: #333;
+
     }
+
+
+    /* =====================================================
+       HEADER
+    ===================================================== */
 
     .header {
-      background: linear-gradient(135deg, #b71c1c, #e53935);
+
+      background:
+        linear-gradient(
+          135deg,
+          #b71c1c,
+          #e53935
+        );
+
       color: white;
+
       text-align: center;
-      padding: 32px 20px 36px;
-      box-shadow: 0 3px 10px rgba(0, 0, 0, 0.15);
+
+      padding:
+        32px 20px 36px;
+
+      box-shadow:
+        0 3px 10px
+        rgba(0, 0, 0, 0.15);
+
     }
+
 
     .header h1 {
+
       margin: 0;
+
       font-size: 30px;
+
       font-weight: 700;
+
     }
+
 
     .header p {
-      margin: 6px 0 0;
+
+      margin:
+        6px 0 0;
+
       font-size: 17px;
+
       opacity: 0.95;
+
     }
+
+
+    /* =====================================================
+       CONTAINER
+    ===================================================== */
 
     .container {
+
       width: 100%;
+
       max-width: 700px;
-      margin: 35px auto;
-      padding: 0 20px;
+
+      margin:
+        35px auto;
+
+      padding:
+        0 20px;
+
     }
+
+
+    /* =====================================================
+       LINK LIST
+    ===================================================== */
 
     .link-list {
+
       display: flex;
+
       flex-direction: column;
+
       gap: 16px;
+
     }
 
+
     .link-button {
-      display: flex;
-      align-items: center;
-      justify-content: space-between;
+
+      display: block;
 
       width: 100%;
-      min-height: 72px;
 
-      padding: 16px 22px;
+      padding:
+        18px 22px;
 
       background: white;
+
       color: #333;
 
       text-decoration: none;
 
       border-radius: 14px;
-      border: 1px solid #e0e0e0;
 
-      box-shadow: 0 3px 10px rgba(0, 0, 0, 0.08);
+      border:
+        1px solid #e0e0e0;
 
-      font-size: 19px;
-      font-weight: 600;
+      box-shadow:
+        0 3px 10px
+        rgba(0, 0, 0, 0.08);
 
       transition:
         transform 0.2s,
         box-shadow 0.2s,
         background 0.2s;
+
     }
+
 
     .link-button:hover {
-      transform: translateY(-2px);
-      background: #fff5f5;
-      box-shadow: 0 6px 16px rgba(183, 28, 28, 0.15);
+
+      transform:
+        translateY(-2px);
+
+      background:
+        #fff5f5;
+
+      box-shadow:
+        0 6px 16px
+        rgba(183, 28, 28, 0.15);
+
     }
+
+
+    .link-title-row {
+
+      display: flex;
+
+      align-items: center;
+
+      justify-content: space-between;
+
+      gap: 10px;
+
+    }
+
 
     .link-title {
-      display: flex;
-      align-items: center;
-      gap: 12px;
+
+      font-size: 19px;
+
+      font-weight: 600;
+
     }
+
 
     .arrow {
+
       color: #c62828;
-      font-size: 24px;
+
+      font-size: 28px;
+
       font-weight: 700;
+
+      line-height: 1;
+
     }
 
-    .footer {
-      text-align: center;
-      color: #888;
-      font-size: 14px;
-      margin: 35px 0 25px;
+
+    /* =====================================================
+       DEADLINE
+    ===================================================== */
+
+    .deadline-box {
+
+      margin-top: 10px;
+
+      padding-top: 10px;
+
+      border-top:
+        1px solid #eeeeee;
+
     }
+
+
+    .deadline-text {
+
+      font-size: 15px;
+
+      color: #555;
+
+      margin-bottom: 4px;
+
+    }
+
+
+    .deadline-time {
+
+      font-size: 14px;
+
+      color: #777;
+
+    }
+
+
+    .deadline-status {
+
+      display: inline-block;
+
+      margin-top: 7px;
+
+      padding:
+        3px 10px;
+
+      border-radius: 20px;
+
+      font-size: 13px;
+
+      font-weight: 600;
+
+    }
+
+
+    /* สถานะปกติ */
+
+    .status-normal {
+
+      background: #e8f5e9;
+
+      color: #2e7d32;
+
+    }
+
+
+    /* ใกล้ถึงกำหนด */
+
+    .status-warning {
+
+      background: #ffebee;
+
+      color: #c62828;
+
+      animation:
+        blinkWarning 1s infinite;
+
+    }
+
+
+    /* ใกล้มาก */
+
+    .status-danger {
+
+      background: #ffebee;
+
+      color: #c62828;
+
+      animation:
+        blinkWarning 0.6s infinite;
+
+    }
+
+
+    /* เลยกำหนด */
+
+    .status-expired {
+
+      background: #eeeeee;
+
+      color: #757575;
+
+    }
+
+
+    /* =====================================================
+       เอฟเฟกต์กระพริบ
+    ===================================================== */
+
+    @keyframes blinkWarning {
+
+      0%,
+      100% {
+
+        opacity: 1;
+
+      }
+
+      50% {
+
+        opacity: 0.2;
+
+      }
+
+    }
+
+
+    /* =====================================================
+       FOOTER
+    ===================================================== */
+
+    .footer {
+
+      text-align: center;
+
+      color: #888;
+
+      font-size: 14px;
+
+      margin:
+        35px 0 25px;
+
+    }
+
+
+    /* =====================================================
+       MOBILE
+    ===================================================== */
 
     @media (max-width: 600px) {
 
       .header {
-        padding: 25px 15px 28px;
+
+        padding:
+          25px 15px 28px;
+
       }
+
 
       .header h1 {
+
         font-size: 24px;
+
       }
+
 
       .header p {
+
         font-size: 15px;
+
       }
+
 
       .container {
+
         margin-top: 25px;
-        padding: 0 15px;
+
+        padding:
+          0 15px;
+
       }
 
+
       .link-button {
-        min-height: 65px;
-        padding: 14px 17px;
-        font-size: 17px;
+
+        padding:
+          16px 17px;
+
       }
+
+
+      .link-title {
+
+        font-size: 17px;
+
+      }
+
     }
+
   </style>
+
 </head>
+
 
 <body>
 
+
+  <!-- =====================================================
+       HEADER
+  ===================================================== -->
+
   <div class="header">
-    <h1>กิจกรรมส่งเสริมกระบวนการชุมชนแห่งการเรียนรู้ทางวิชาชีพ
-เพื่อพัฒนาจรรยาบรรณวิชาชีพผ่านระบบเทคโนโลยีสารสนเทศ
-(Ethics in Professional Learning Community : E-PLC) ประจําปี 2569</h1>
-    <p>โรงเรียนมหาชนะชัยวิทยาคม</p>
+
+    <h1>
+      กิจกรรมส่งเสริมกระบวนการชุมชนแห่งการเรียนรู้ทางวิชาชีพ
+      เพื่อพัฒนาจรรยาบรรณวิชาชีพผ่านระบบเทคโนโลยีสารสนเทศ
+      (Ethics in Professional Learning Community : E-PLC) ประจําปี 2569
+    </h1>
+
+    <p>
+      โรงเรียนมหาชนะชัยวิทยาคม
+    </p>
+
   </div>
+
 
 
   <div class="container">
 
-    <div id="linkList" class="link-list"></div>
+
+    <!-- รายการลิงก์ -->
+
+    <div
+      id="linkList"
+      class="link-list"
+    ></div>
+
 
     <div class="footer">
+
       โรงเรียนมหาชนะชัยวิทยาคม
+
     </div>
 
   </div>
 
 
+
   <script>
 
-    /* =====================================================
-       แก้ไขลิงก์ตรงส่วนนี้
-       
-       สามารถแก้ได้ทั้ง
-       1. title = ชื่อหัวข้อ
-       2. url   = URL ของลิงก์
 
-       ไม่ต้องแก้ส่วนอื่นของโค้ด
+    /* =====================================================
+       ตั้งค่าลิงก์
+
+       แก้ไขข้อมูลเฉพาะส่วนนี้
+
+       title
+       = ชื่อหัวข้อ
+
+       url
+       = ลิงก์ที่ต้องการเปิด
+
+       deadlineText
+       = ข้อความกำหนดส่งที่ต้องการแสดง
+
+       deadline
+       = วันและเวลาจริงสำหรับใช้คำนวณสถานะ
+
+       ถ้าไม่กำหนดเวลา ให้ใช้:
+
+       deadline: ""
+
     ===================================================== */
+
 
     const links = [
 
       {
-        title: "📄คู่มือการใช้แพลตฟอร์ม",
-        url: "https://drive.google.com/drive/folders/1OiJXDgL2pugoB9YDue4JytZH8yP6LJ-o?usp=sharing"
+
+        title:
+          "📄คู่มือการใช้แพลตฟอร์ม",
+
+        url:
+          "https://drive.google.com/drive/folders/1OiJXDgL2pugoB9YDue4JytZH8yP6LJ-o?usp=sharing",
+
+        deadlineText:
+          "",
+
+        deadline:
+          ""
+
       },
 
-      {
-        title: "📊 ลิงก์เข้าอบรมและส่งงานในแพลตฟอร์ม",
-        url: "https://khuruplatform.ksp.or.th/_/login"
-      },
 
       {
-        title: "📚 แบบฟอร์มชิ้นงานที่ 1- 5",
-        url: "https://drive.google.com/drive/folders/1gm5NLeF8byi3i3PTL8UuKPV-_lT1fEwD?usp=sharing"
+
+        title:
+          "📊 ลิงก์เข้าอบรมและส่งงานในแพลตฟอร์ม",
+
+        url:
+          "https://khuruplatform.ksp.or.th/_/login",
+
+        deadlineText:
+          "สำหรับเข้าใช้งานระบบ",
+
+        deadline:
+          ""
+
       },
 
-      {
-        title: "📝 ส่งชิ้นงานที่ 1-5 ส่งในแพลตฟอร์มและในไดรฟ์โรงเรียน",
-        url: "https://drive.google.com/drive/folders/1jd6_Swhd3Btgh7buPkDvsoi2pPM2BSiO?usp=sharing"
-      },
 
       {
-        title: "📌 ตรวจสอบรายชื่อการส่งงาน",
-        url: "https://docs.google.com/spreadsheets/d/1F3aNVNA6qeMIQi7qGBPMhvpbOJHzx3q_RMwea5Scq9A/edit?usp=sharing"
+
+        title:
+          "📚 แบบฟอร์มชิ้นงานที่ 1- 5",
+
+        url:
+          "https://drive.google.com/drive/folders/1gm5NLeF8byi3i3PTL8UuKPV-_lT1fEwD?usp=sharing",
+
+        deadlineText:
+          "ส่งแบบฟอร์มครั้งที่ 2",
+
+        deadline:
+          "2026-09-21T15:30:00"
+
+      },
+
+
+      {
+
+        title:
+          "📝 ส่งชิ้นงานที่ 1-5 ส่งในไดรฟ์โรงเรียน",
+
+        url:
+          "https://drive.google.com/drive/folders/1jd6_Swhd3Btgh7buPkDvsoi2pPM2BSiO?usp=sharing",
+
+        deadlineText:
+          "สำหรับเก็บข้อมูลของโรงเรียน",
+
+        deadline:
+          ""
+
+      },
+
+
+      {
+
+        title:
+          "📌 ตรวจสอบรายชื่อการส่งงาน",
+
+        url:
+          "https://docs.google.com/spreadsheets/d/1F3aNVNA6qeMIQi7qGBPMhvpbOJHzx3q_RMwea5Scq9A/edit?usp=sharing",
+
+        deadlineText:
+          "สำหรับตรวจรายชื่อครูที่ส่งงานแล้ว",
+
+        deadline:
+          ""
+
       }
 
     ];
 
 
+
     /* =====================================================
-       สร้างปุ่มลิงก์
+       แปลงวันที่เป็นภาษาไทย
     ===================================================== */
 
-    function loadLinks() {
+    function formatThaiDate(
+      date
+    ) {
 
-      const container =
-        document.getElementById("linkList");
+      const months = [
 
-      container.innerHTML = "";
+        "ม.ค.",
+        "ก.พ.",
+        "มี.ค.",
+        "เม.ย.",
+        "พ.ค.",
+        "มิ.ย.",
+        "ก.ค.",
+        "ส.ค.",
+        "ก.ย.",
+        "ต.ค.",
+        "พ.ย.",
+        "ธ.ค."
 
-      links.forEach(function(link) {
-
-        if (
-          !link.title ||
-          !link.url
-        ) {
-          return;
-        }
-
-        const a =
-          document.createElement("a");
-
-        a.className = "link-button";
-
-        a.href = link.url;
-
-        a.target = "_blank";
-
-        a.rel = "noopener noreferrer";
+      ];
 
 
-        const title =
-          document.createElement("div");
-
-        title.className = "link-title";
-
-        title.textContent =
-          link.title;
+      const day =
+        date.getDate();
 
 
-        const arrow =
-          document.createElement("div");
-
-        arrow.className = "arrow";
-
-        arrow.textContent = "›";
+      const month =
+        months[
+          date.getMonth()
+        ];
 
 
-        a.appendChild(title);
+      const year =
+        date.getFullYear()
+        + 543;
 
-        a.appendChild(arrow);
 
-        container.appendChild(a);
+      const hour =
+        String(
+          date.getHours()
+        ).padStart(2, "0");
 
-      });
+
+      const minute =
+        String(
+          date.getMinutes()
+        ).padStart(2, "0");
+
+
+      return (
+        day
+        + " "
+        + month
+        + " "
+        + year
+        + " เวลา "
+        + hour
+        + ":"
+        + minute
+        + " น."
+      );
 
     }
 
 
+
     /* =====================================================
-       เริ่มต้นหน้าเว็บ
+       คำนวณสถานะกำหนดส่ง
+    ===================================================== */
+
+    function getDeadlineStatus(
+      deadline
+    ) {
+
+      const now =
+        new Date();
+
+
+      const target =
+        new Date(
+          deadline
+        );
+
+
+      const diff =
+        target.getTime()
+        - now.getTime();
+
+
+      /* เลยกำหนด */
+
+      if (
+        diff <= 0
+      ) {
+
+        return {
+
+          text:
+            "🔴 เลยกำหนดส่งแล้ว",
+
+          className:
+            "status-expired"
+
+        };
+
+      }
+
+
+      const hours =
+        diff
+        /
+        (
+          1000
+          * 60
+          * 60
+        );
+
+
+      /* เหลือน้อยกว่า 24 ชั่วโมง */
+
+      if (
+        hours <= 24
+      ) {
+
+        return {
+
+          text:
+            "🔴 ใกล้ถึงกำหนดส่งมาก",
+
+          className:
+            "status-danger"
+
+        };
+
+      }
+
+
+      /* เหลือน้อยกว่า 3 วัน */
+
+      if (
+        hours <= 72
+      ) {
+
+        return {
+
+          text:
+            "🔴 ใกล้ถึงกำหนดส่ง",
+
+          className:
+            "status-warning"
+
+        };
+
+      }
+
+
+      /* ปกติ */
+
+      return {
+
+        text:
+          "🟢 ยังไม่ถึงกำหนดส่ง",
+
+        className:
+          "status-normal"
+
+      };
+
+    }
+
+
+
+    /* =====================================================
+       สร้างรายการลิงก์
+    ===================================================== */
+
+    function loadLinks() {
+
+
+      const container =
+        document.getElementById(
+          "linkList"
+        );
+
+
+      container.innerHTML = "";
+
+
+      links.forEach(
+        function(link) {
+
+
+          if (
+            !link.title
+            ||
+            !link.url
+          ) {
+
+            return;
+
+          }
+
+
+          const a =
+            document.createElement(
+              "a"
+            );
+
+
+          a.className =
+            "link-button";
+
+
+          a.href =
+            link.url;
+
+
+          a.target =
+            "_blank";
+
+
+          a.rel =
+            "noopener noreferrer";
+
+
+
+          /* =================================================
+             ชื่อหัวข้อ
+          ================================================= */
+
+          const titleRow =
+            document.createElement(
+              "div"
+            );
+
+
+          titleRow.className =
+            "link-title-row";
+
+
+          const title =
+            document.createElement(
+              "div"
+            );
+
+
+          title.className =
+            "link-title";
+
+
+          title.textContent =
+            link.title;
+
+
+          const arrow =
+            document.createElement(
+              "div"
+            );
+
+
+          arrow.className =
+            "arrow";
+
+
+          arrow.textContent =
+            "›";
+
+
+          titleRow.appendChild(
+            title
+          );
+
+
+          titleRow.appendChild(
+            arrow
+          );
+
+
+          a.appendChild(
+            titleRow
+          );
+
+
+
+          /* =================================================
+             กำหนดส่ง
+          ================================================= */
+
+          if (
+            link.deadlineText
+            ||
+            link.deadline
+          ) {
+
+
+            const deadlineBox =
+              document.createElement(
+                "div"
+              );
+
+
+            deadlineBox.className =
+              "deadline-box";
+
+
+
+            /* ข้อความกำหนดส่ง */
+
+            if (
+              link.deadlineText
+            ) {
+
+              const text =
+                document.createElement(
+                  "div"
+                );
+
+
+              text.className =
+                "deadline-text";
+
+
+              text.textContent =
+                "📌 "
+                +
+                link.deadlineText;
+
+
+              deadlineBox.appendChild(
+                text
+              );
+
+            }
+
+
+
+            /* วันและเวลา */
+
+            if (
+              link.deadline
+            ) {
+
+
+              const date =
+                new Date(
+                  link.deadline
+                );
+
+
+              const time =
+                document.createElement(
+                  "div"
+                );
+
+
+              time.className =
+                "deadline-time";
+
+
+              time.textContent =
+                "⏰ กำหนดส่ง "
+                +
+                formatThaiDate(
+                  date
+                );
+
+
+              deadlineBox.appendChild(
+                time
+              );
+
+
+
+              /* สถานะ */
+
+              const status =
+                getDeadlineStatus(
+                  link.deadline
+                );
+
+
+              const statusElement =
+                document.createElement(
+                  "div"
+                );
+
+
+              statusElement.className =
+                "deadline-status "
+                +
+                status.className;
+
+
+              statusElement.textContent =
+                status.text;
+
+
+              deadlineBox.appendChild(
+                statusElement
+              );
+
+            }
+
+
+            a.appendChild(
+              deadlineBox
+            );
+
+          }
+
+
+          container.appendChild(
+            a
+          );
+
+
+        }
+      );
+
+    }
+
+
+
+    /* =====================================================
+       โหลดหน้าเว็บ
     ===================================================== */
 
     loadLinks();
 
+
   </script>
 
 </body>
+
 </html>
+
