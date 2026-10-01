@@ -159,8 +159,6 @@
         box-shadow 0.2s,
         background 0.2s;
 
-      overflow: visible;
-
     }
 
 
@@ -191,7 +189,7 @@
 
       position: relative;
 
-      z-index: 2;
+      z-index: 5;
 
     }
 
@@ -219,7 +217,7 @@
 
 
     /* =====================================================
-       🎉 เอฟเฟกต์แสดงความยินดี
+       🎉 CARD แสดงความยินดี
     ===================================================== */
 
     .celebration {
@@ -236,7 +234,7 @@
         2px solid #ffd54f;
 
       animation:
-        celebrationPulse 1.4s infinite;
+        celebrationPulse 1.5s infinite;
 
       overflow: visible;
 
@@ -260,7 +258,7 @@
       50% {
 
         transform:
-          scale(1.015);
+          scale(1.012);
 
         box-shadow:
           0 8px 28px
@@ -272,245 +270,148 @@
 
 
     /* =====================================================
-       🎆 พลุ / ดอกไม้ / ประกาย
+       🎆 CANVAS พลุ
     ===================================================== */
 
-    .celebration::before {
-
-      content:
-        "🎆";
+    .fireworks-container {
 
       position: absolute;
 
-      left: -20px;
+      top: -90px;
 
-      top: 50%;
+      left: -80px;
 
-      font-size: 32px;
+      right: -80px;
 
-      transform:
-        translateY(-50%)
-        scale(0.5);
-
-      opacity: 0;
+      bottom: -90px;
 
       pointer-events: none;
 
-      animation:
-        fireworkLeft 2.8s infinite;
+      overflow: visible;
 
-      z-index: 3;
+      z-index: 1;
 
     }
 
 
-    .celebration::after {
-
-      content:
-        "🎆";
+    .fireworks-canvas {
 
       position: absolute;
 
-      right: -20px;
+      inset: 0;
 
-      top: 50%;
+      width: 100%;
 
-      font-size: 32px;
-
-      transform:
-        translateY(-50%)
-        scale(0.5);
-
-      opacity: 0;
+      height: 100%;
 
       pointer-events: none;
-
-      animation:
-        fireworkRight 2.8s infinite 0.8s;
-
-      z-index: 3;
-
-    }
-
-
-    @keyframes fireworkLeft {
-
-      0% {
-
-        opacity: 0;
-
-        transform:
-          translate(
-            0,
-            -50%
-          )
-          scale(0.3)
-          rotate(-15deg);
-
-      }
-
-      15% {
-
-        opacity: 1;
-
-        transform:
-          translate(
-            -5px,
-            -50%
-          )
-          scale(1.1)
-          rotate(0deg);
-
-      }
-
-      35% {
-
-        opacity: 1;
-
-        transform:
-          translate(
-            -25px,
-            -75%
-          )
-          scale(1.35)
-          rotate(10deg);
-
-      }
-
-      60% {
-
-        opacity: 0.8;
-
-        transform:
-          translate(
-            -42px,
-            -120%
-          )
-          scale(1.5)
-          rotate(-10deg);
-
-      }
-
-      100% {
-
-        opacity: 0;
-
-        transform:
-          translate(
-            -60px,
-            -160%
-          )
-          scale(0.5);
-
-      }
-
-    }
-
-
-    @keyframes fireworkRight {
-
-      0% {
-
-        opacity: 0;
-
-        transform:
-          translate(
-            0,
-            -50%
-          )
-          scale(0.3)
-          rotate(15deg);
-
-      }
-
-      15% {
-
-        opacity: 1;
-
-        transform:
-          translate(
-            5px,
-            -50%
-          )
-          scale(1.1)
-          rotate(0deg);
-
-      }
-
-      35% {
-
-        opacity: 1;
-
-        transform:
-          translate(
-            25px,
-            -80%
-          )
-          scale(1.35)
-          rotate(-10deg);
-
-      }
-
-      60% {
-
-        opacity: 0.8;
-
-        transform:
-          translate(
-            42px,
-            -125%
-          )
-          scale(1.5)
-          rotate(10deg);
-
-      }
-
-      100% {
-
-        opacity: 0;
-
-        transform:
-          translate(
-            60px,
-            -165%
-          )
-          scale(0.5);
-
-      }
 
     }
 
 
     /* =====================================================
-       ✨ ประกายและดอกไม้
+       🎊 ข้อความแสดงความยินดี
     ===================================================== */
 
-    .celebration .link-title::after {
+    .celebration-message {
 
-      content:
-        " ✨ 🌸 ✨";
+      position: absolute;
 
-      display: inline-block;
+      left: 50%;
 
-      margin-left: 5px;
+      bottom: -34px;
+
+      transform:
+        translateX(-50%);
+
+      z-index: 6;
+
+      white-space: nowrap;
+
+      font-size: 14px;
+
+      font-weight: 600;
+
+      color: #b8860b;
+
+      opacity: 0.9;
+
+    }
+
+
+    /* =====================================================
+       ✨ ประกาย
+    ===================================================== */
+
+    .celebration-sparkle {
+
+      position: absolute;
+
+      pointer-events: none;
+
+      z-index: 4;
 
       font-size: 18px;
 
       animation:
-        sparkle 1.5s infinite;
+        sparkleFloat 2s infinite ease-in-out;
 
     }
 
 
-    @keyframes sparkle {
+    .sparkle-1 {
+
+      left: 5%;
+
+      top: 15%;
+
+      animation-delay: 0s;
+
+    }
+
+
+    .sparkle-2 {
+
+      right: 7%;
+
+      top: 20%;
+
+      animation-delay: 0.5s;
+
+    }
+
+
+    .sparkle-3 {
+
+      left: 12%;
+
+      bottom: 12%;
+
+      animation-delay: 1s;
+
+    }
+
+
+    .sparkle-4 {
+
+      right: 15%;
+
+      bottom: 15%;
+
+      animation-delay: 1.5s;
+
+    }
+
+
+    @keyframes sparkleFloat {
 
       0%,
       100% {
 
-        opacity: 0.35;
+        opacity: 0.25;
 
         transform:
-          scale(0.8)
+          scale(0.7)
           rotate(0deg);
 
       }
@@ -520,56 +421,8 @@
         opacity: 1;
 
         transform:
-          scale(1.2)
-          rotate(8deg);
-
-      }
-
-    }
-
-
-    /* =====================================================
-       🎊 ลูกบอล/ดอกไม้เล็ก ๆ
-    ===================================================== */
-
-    .celebration .link-title {
-
-      position: relative;
-
-    }
-
-
-    .celebration .link-title::before {
-
-      content:
-        "🎊";
-
-      display: inline-block;
-
-      margin-right: 5px;
-
-      animation:
-        confetti 1.8s infinite;
-
-    }
-
-
-    @keyframes confetti {
-
-      0%,
-      100% {
-
-        transform:
-          rotate(-8deg)
-          scale(0.9);
-
-      }
-
-      50% {
-
-        transform:
-          rotate(8deg)
-          scale(1.15);
+          scale(1.3)
+          rotate(20deg);
 
       }
 
@@ -588,6 +441,10 @@
 
       border-top:
         1px solid #eeeeee;
+
+      position: relative;
+
+      z-index: 5;
 
     }
 
@@ -773,20 +630,24 @@
       }
 
 
-      .celebration::before {
+      .fireworks-container {
 
-        left: -10px;
+        top: -65px;
 
-        font-size: 26px;
+        left: -35px;
+
+        right: -35px;
+
+        bottom: -65px;
 
       }
 
 
-      .celebration::after {
+      .celebration-message {
 
-        right: -10px;
+        font-size: 12px;
 
-        font-size: 26px;
+        bottom: -28px;
 
       }
 
@@ -846,11 +707,7 @@
 
     /* =====================================================
        ตั้งค่าลิงก์
-
-       celebration: true
-       = แสดงเอฟเฟกต์แสดงความยินดี
     ===================================================== */
-
 
     const links = [
 
@@ -1051,8 +908,6 @@
         - now.getTime();
 
 
-      /* เลยกำหนด */
-
       if (
         diff <= 0
       ) {
@@ -1080,8 +935,6 @@
         );
 
 
-      /* เหลือน้อยกว่า 24 ชั่วโมง */
-
       if (
         hours <= 24
       ) {
@@ -1098,8 +951,6 @@
 
       }
 
-
-      /* เหลือน้อยกว่า 3 วัน */
 
       if (
         hours <= 72
@@ -1118,8 +969,6 @@
       }
 
 
-      /* ปกติ */
-
       return {
 
         text:
@@ -1129,6 +978,626 @@
           "status-normal"
 
       };
+
+    }
+
+
+
+    /* =====================================================
+       สร้าง Canvas พลุ
+    ===================================================== */
+
+    function createFireworks(
+      card
+    ) {
+
+      const wrapper =
+        document.createElement(
+          "div"
+        );
+
+
+      wrapper.className =
+        "fireworks-container";
+
+
+      const canvas =
+        document.createElement(
+          "canvas"
+        );
+
+
+      canvas.className =
+        "fireworks-canvas";
+
+
+      wrapper.appendChild(
+        canvas
+      );
+
+
+      /* ประกาย */
+
+      const sparklePositions = [
+
+        "sparkle-1",
+        "sparkle-2",
+        "sparkle-3",
+        "sparkle-4"
+
+      ];
+
+
+      sparklePositions.forEach(
+        function(className) {
+
+          const sparkle =
+            document.createElement(
+              "div"
+            );
+
+          sparkle.className =
+            "celebration-sparkle "
+            +
+            className;
+
+          sparkle.textContent =
+            "✨";
+
+          wrapper.appendChild(
+            sparkle
+          );
+
+        }
+      );
+
+
+      /* ข้อความ */
+
+      const message =
+        document.createElement(
+          "div"
+        );
+
+
+      message.className =
+        "celebration-message";
+
+
+      message.textContent =
+        "🎉 ขอแสดงความยินดี 🎉";
+
+
+      wrapper.appendChild(
+        message
+      );
+
+
+      card.appendChild(
+        wrapper
+      );
+
+
+      const ctx =
+        canvas.getContext(
+          "2d"
+        );
+
+
+      let width = 0;
+      let height = 0;
+
+
+      function resizeCanvas() {
+
+        const rect =
+          wrapper.getBoundingClientRect();
+
+
+        width =
+          Math.max(
+            1,
+            rect.width
+          );
+
+
+        height =
+          Math.max(
+            1,
+            rect.height
+          );
+
+
+        const ratio =
+          window.devicePixelRatio
+          || 1;
+
+
+        canvas.width =
+          width * ratio;
+
+
+        canvas.height =
+          height * ratio;
+
+
+        canvas.style.width =
+          width + "px";
+
+
+        canvas.style.height =
+          height + "px";
+
+
+        ctx.setTransform(
+          ratio,
+          0,
+          0,
+          ratio,
+          0,
+          0
+        );
+
+      }
+
+
+      resizeCanvas();
+
+
+      window.addEventListener(
+        "resize",
+        resizeCanvas
+      );
+
+
+      /* =================================================
+         พลุ
+      ================================================= */
+
+      const rockets = [];
+
+      const particles = [];
+
+
+      function random(
+        min,
+        max
+      ) {
+
+        return (
+          Math.random()
+          *
+          (
+            max - min
+          )
+          +
+          min
+        );
+
+      }
+
+
+      function createRocket() {
+
+        rockets.push({
+
+          x:
+            random(
+              width * 0.15,
+              width * 0.85
+            ),
+
+          y:
+            height + 10,
+
+          targetY:
+            random(
+              height * 0.12,
+              height * 0.55
+            ),
+
+          speed:
+            random(
+              4,
+              7
+            ),
+
+          hue:
+            random(
+              0,
+              360
+            ),
+
+          trail: []
+
+        });
+
+      }
+
+
+      function explode(
+        rocket
+      ) {
+
+        const count =
+          Math.floor(
+            random(
+              45,
+              75
+            )
+          );
+
+
+        for (
+          let i = 0;
+          i < count;
+          i++
+        ) {
+
+          const angle =
+            (
+              Math.PI * 2
+            )
+            *
+            (
+              i / count
+            )
+            +
+            random(
+              -0.08,
+              0.08
+            );
+
+
+          const speed =
+            random(
+              1.5,
+              4.5
+            );
+
+
+          particles.push({
+
+            x:
+              rocket.x,
+
+            y:
+              rocket.y,
+
+            vx:
+              Math.cos(angle)
+              * speed,
+
+            vy:
+              Math.sin(angle)
+              * speed,
+
+            life:
+              1,
+
+            decay:
+              random(
+                0.012,
+                0.022
+              ),
+
+            size:
+              random(
+                1,
+                2.5
+              ),
+
+            hue:
+              rocket.hue
+              +
+              random(
+                -25,
+                25
+              )
+
+          });
+
+        }
+
+      }
+
+
+      let lastLaunch =
+        performance.now();
+
+
+      let nextLaunch =
+        random(
+          900,
+          1800
+        );
+
+
+      function animate(
+        time
+      ) {
+
+        ctx.clearRect(
+          0,
+          0,
+          width,
+          height
+        );
+
+
+        /* ===============================
+           สร้างพลุใหม่
+        =============================== */
+
+        if (
+          time
+          -
+          lastLaunch
+          >
+          nextLaunch
+        ) {
+
+          createRocket();
+
+          lastLaunch =
+            time;
+
+          nextLaunch =
+            random(
+              900,
+              1800
+            );
+
+        }
+
+
+        /* ===============================
+           จรวด
+        =============================== */
+
+        for (
+          let i =
+            rockets.length - 1;
+          i >= 0;
+          i--
+        ) {
+
+          const rocket =
+            rockets[i];
+
+
+          rocket.y -=
+            rocket.speed;
+
+
+          rocket.trail.push({
+
+            x:
+              rocket.x,
+
+            y:
+              rocket.y
+
+          });
+
+
+          if (
+            rocket.trail.length
+            >
+            8
+          ) {
+
+            rocket.trail.shift();
+
+          }
+
+
+          /* หางพลุ */
+
+          for (
+            let j = 0;
+            j <
+            rocket.trail.length;
+            j++
+          ) {
+
+            const point =
+              rocket.trail[j];
+
+
+            ctx.beginPath();
+
+
+            ctx.arc(
+              point.x,
+              point.y,
+              1.3,
+              0,
+              Math.PI * 2
+            );
+
+
+            ctx.fillStyle =
+              "hsla("
+              +
+              rocket.hue
+              +
+              ",100%,70%,"
+              +
+              (
+                j /
+                rocket.trail.length
+              )
+              +
+              ")";
+
+
+            ctx.fill();
+
+          }
+
+
+          /* ระเบิด */
+
+          if (
+            rocket.y
+            <=
+            rocket.targetY
+          ) {
+
+            explode(
+              rocket
+            );
+
+            rockets.splice(
+              i,
+              1
+            );
+
+          }
+
+        }
+
+
+        /* ===============================
+           อนุภาค
+        =============================== */
+
+        for (
+          let i =
+            particles.length - 1;
+          i >= 0;
+          i--
+        ) {
+
+          const particle =
+            particles[i];
+
+
+          particle.x +=
+            particle.vx;
+
+
+          particle.y +=
+            particle.vy;
+
+
+          particle.vy +=
+            0.035;
+
+
+          particle.vx *=
+            0.985;
+
+
+          particle.vy *=
+            0.985;
+
+
+          particle.life -=
+            particle.decay;
+
+
+          if (
+            particle.life
+            <=
+            0
+          ) {
+
+            particles.splice(
+              i,
+              1
+            );
+
+            continue;
+
+          }
+
+
+          /* แสงเรือง */
+
+          ctx.beginPath();
+
+
+          ctx.arc(
+            particle.x,
+            particle.y,
+            particle.size * 3,
+            0,
+            Math.PI * 2
+          );
+
+
+          ctx.fillStyle =
+            "hsla("
+            +
+            particle.hue
+            +
+            ",100%,65%,"
+            +
+            (
+              particle.life * 0.15
+            )
+            +
+            ")";
+
+
+          ctx.fill();
+
+
+          /* จุดหลัก */
+
+          ctx.beginPath();
+
+
+          ctx.arc(
+            particle.x,
+            particle.y,
+            particle.size,
+            0,
+            Math.PI * 2
+          );
+
+
+          ctx.fillStyle =
+            "hsla("
+            +
+            particle.hue
+            +
+            ",100%,75%,"
+            +
+            particle.life
+            +
+            ")";
+
+
+          ctx.fill();
+
+        }
+
+
+        requestAnimationFrame(
+          animate
+        );
+
+      }
+
+
+      requestAnimationFrame(
+        animate
+      );
+
+
+      /* พลุลูกแรก */
+
+      setTimeout(
+        function() {
+
+          createRocket();
+
+        },
+        500
+      );
 
     }
 
@@ -1176,7 +1645,7 @@
 
 
           /* =================================================
-             🎉 เพิ่มเอฟเฟกต์แสดงความยินดี
+             🎉 รายการแสดงความยินดี
           ================================================= */
 
           if (
@@ -1391,6 +1860,21 @@
           container.appendChild(
             a
           );
+
+
+          /* =================================================
+             🎆 เริ่มระบบพลุ
+          ================================================= */
+
+          if (
+            link.celebration
+          ) {
+
+            createFireworks(
+              a
+            );
+
+          }
 
 
         }
