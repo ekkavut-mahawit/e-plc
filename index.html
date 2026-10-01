@@ -1,4 +1,4 @@
-```html
+
 <!DOCTYPE html>
 <html lang="th">
 
@@ -130,6 +130,8 @@
 
     .link-button {
 
+      position: relative;
+
       display: block;
 
       width: 100%;
@@ -156,6 +158,8 @@
         transform 0.2s,
         box-shadow 0.2s,
         background 0.2s;
+
+      overflow: visible;
 
     }
 
@@ -185,6 +189,10 @@
 
       gap: 10px;
 
+      position: relative;
+
+      z-index: 2;
+
     }
 
 
@@ -211,18 +219,31 @@
 
 
     /* =====================================================
-       เอฟเฟกต์แสดงความยินดี
+       🎉 เอฟเฟกต์แสดงความยินดี
     ===================================================== */
 
-    .link-button.celebration {
+    .celebration {
+
+      background:
+        linear-gradient(
+          135deg,
+          #fffdf0,
+          #fff8d6,
+          #ffffff
+        );
+
+      border:
+        2px solid #ffd54f;
 
       animation:
-        celebrationBlink 1.2s infinite;
+        celebrationPulse 1.4s infinite;
+
+      overflow: visible;
 
     }
 
 
-    @keyframes celebrationBlink {
+    @keyframes celebrationPulse {
 
       0%,
       100% {
@@ -231,8 +252,8 @@
           scale(1);
 
         box-shadow:
-          0 3px 10px
-          rgba(0, 0, 0, 0.08);
+          0 3px 12px
+          rgba(255, 193, 7, 0.25);
 
       }
 
@@ -241,12 +262,314 @@
         transform:
           scale(1.015);
 
-        background:
-          #fffdf0;
-
         box-shadow:
-          0 6px 22px
-          rgba(255, 193, 7, 0.45);
+          0 8px 28px
+          rgba(255, 193, 7, 0.55);
+
+      }
+
+    }
+
+
+    /* =====================================================
+       🎆 พลุ / ดอกไม้ / ประกาย
+    ===================================================== */
+
+    .celebration::before {
+
+      content:
+        "🎆";
+
+      position: absolute;
+
+      left: -20px;
+
+      top: 50%;
+
+      font-size: 32px;
+
+      transform:
+        translateY(-50%)
+        scale(0.5);
+
+      opacity: 0;
+
+      pointer-events: none;
+
+      animation:
+        fireworkLeft 2.8s infinite;
+
+      z-index: 3;
+
+    }
+
+
+    .celebration::after {
+
+      content:
+        "🎆";
+
+      position: absolute;
+
+      right: -20px;
+
+      top: 50%;
+
+      font-size: 32px;
+
+      transform:
+        translateY(-50%)
+        scale(0.5);
+
+      opacity: 0;
+
+      pointer-events: none;
+
+      animation:
+        fireworkRight 2.8s infinite 0.8s;
+
+      z-index: 3;
+
+    }
+
+
+    @keyframes fireworkLeft {
+
+      0% {
+
+        opacity: 0;
+
+        transform:
+          translate(
+            0,
+            -50%
+          )
+          scale(0.3)
+          rotate(-15deg);
+
+      }
+
+      15% {
+
+        opacity: 1;
+
+        transform:
+          translate(
+            -5px,
+            -50%
+          )
+          scale(1.1)
+          rotate(0deg);
+
+      }
+
+      35% {
+
+        opacity: 1;
+
+        transform:
+          translate(
+            -25px,
+            -75%
+          )
+          scale(1.35)
+          rotate(10deg);
+
+      }
+
+      60% {
+
+        opacity: 0.8;
+
+        transform:
+          translate(
+            -42px,
+            -120%
+          )
+          scale(1.5)
+          rotate(-10deg);
+
+      }
+
+      100% {
+
+        opacity: 0;
+
+        transform:
+          translate(
+            -60px,
+            -160%
+          )
+          scale(0.5);
+
+      }
+
+    }
+
+
+    @keyframes fireworkRight {
+
+      0% {
+
+        opacity: 0;
+
+        transform:
+          translate(
+            0,
+            -50%
+          )
+          scale(0.3)
+          rotate(15deg);
+
+      }
+
+      15% {
+
+        opacity: 1;
+
+        transform:
+          translate(
+            5px,
+            -50%
+          )
+          scale(1.1)
+          rotate(0deg);
+
+      }
+
+      35% {
+
+        opacity: 1;
+
+        transform:
+          translate(
+            25px,
+            -80%
+          )
+          scale(1.35)
+          rotate(-10deg);
+
+      }
+
+      60% {
+
+        opacity: 0.8;
+
+        transform:
+          translate(
+            42px,
+            -125%
+          )
+          scale(1.5)
+          rotate(10deg);
+
+      }
+
+      100% {
+
+        opacity: 0;
+
+        transform:
+          translate(
+            60px,
+            -165%
+          )
+          scale(0.5);
+
+      }
+
+    }
+
+
+    /* =====================================================
+       ✨ ประกายและดอกไม้
+    ===================================================== */
+
+    .celebration .link-title::after {
+
+      content:
+        " ✨ 🌸 ✨";
+
+      display: inline-block;
+
+      margin-left: 5px;
+
+      font-size: 18px;
+
+      animation:
+        sparkle 1.5s infinite;
+
+    }
+
+
+    @keyframes sparkle {
+
+      0%,
+      100% {
+
+        opacity: 0.35;
+
+        transform:
+          scale(0.8)
+          rotate(0deg);
+
+      }
+
+      50% {
+
+        opacity: 1;
+
+        transform:
+          scale(1.2)
+          rotate(8deg);
+
+      }
+
+    }
+
+
+    /* =====================================================
+       🎊 ลูกบอล/ดอกไม้เล็ก ๆ
+    ===================================================== */
+
+    .celebration .link-title {
+
+      position: relative;
+
+    }
+
+
+    .celebration .link-title::before {
+
+      content:
+        "🎊";
+
+      display: inline-block;
+
+      margin-right: 5px;
+
+      animation:
+        confetti 1.8s infinite;
+
+    }
+
+
+    @keyframes confetti {
+
+      0%,
+      100% {
+
+        transform:
+          rotate(-8deg)
+          scale(0.9);
+
+      }
+
+      50% {
+
+        transform:
+          rotate(8deg)
+          scale(1.15);
 
       }
 
@@ -449,6 +772,24 @@
 
       }
 
+
+      .celebration::before {
+
+        left: -10px;
+
+        font-size: 26px;
+
+      }
+
+
+      .celebration::after {
+
+        right: -10px;
+
+        font-size: 26px;
+
+      }
+
     }
 
   </style>
@@ -506,28 +847,8 @@
     /* =====================================================
        ตั้งค่าลิงก์
 
-       แก้ไขข้อมูลเฉพาะส่วนนี้
-
-       title
-       = ชื่อหัวข้อ
-
-       url
-       = ลิงก์ที่ต้องการเปิด
-
-       deadlineText
-       = ข้อความกำหนดส่งที่ต้องการแสดง
-
-       deadline
-       = วันและเวลาจริงสำหรับใช้คำนวณสถานะ
-
-       celebration
-       = true สำหรับรายการที่ต้องการ
-         แสดงเอฟเฟกต์แสดงความยินดี
-
-       ถ้าไม่กำหนดเวลา ให้ใช้:
-
-       deadline: ""
-
+       celebration: true
+       = แสดงเอฟเฟกต์แสดงความยินดี
     ===================================================== */
 
 
@@ -855,7 +1176,7 @@
 
 
           /* =================================================
-             เอฟเฟกต์แสดงความยินดี
+             🎉 เพิ่มเอฟเฟกต์แสดงความยินดี
           ================================================= */
 
           if (
@@ -1091,4 +1412,4 @@
 </body>
 
 </html>
-```
+
